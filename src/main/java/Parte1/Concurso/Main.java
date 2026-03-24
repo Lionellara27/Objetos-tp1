@@ -1,4 +1,4 @@
-package org.example;
+package Parte1.Concurso;
 
 import java.time.LocalDate;
 

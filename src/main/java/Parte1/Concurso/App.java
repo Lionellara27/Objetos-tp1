@@ -1,4 +1,4 @@
-package org.example;
+package Parte1.Concurso;
 
 /**
  * Hello world!

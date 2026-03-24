@@ -1,4 +1,4 @@
-package org.example;
+package Parte1.Concurso;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -8,17 +8,9 @@ public class Participante {
     private String nombre;
     private int dni;
     private int puntos;
-    private static final int PUNTOS = 10;
-    private List<Concurso> concursos;
+    //private static final int PUNTOS = 10;
+    private List<Concurso> concursos; //asi el participante almacena "sabe" en que curso esta
 
-
-    //constructor vacio carga un ""participante"" defaul ponele
-    public Participante( ) {
-        this.nombre = "Participante";
-        this.dni = 0;
-        this.puntos = 0;
-        this.concursos = new ArrayList<>();
-    }
 
     public Participante(String nombre, int dni) {
         this.nombre = nombre;
@@ -27,29 +19,19 @@ public class Participante {
         this.concursos = new ArrayList<>();
     }
 
+    //se le suma puntos
     public void sumarPuntos(int puntos) {
         this.puntos += puntos;
     }
 
-    public int puntosParticipante(){
+    //y se recuperan los mismos
+    public int sumarPuntosPrimerDia(){
         return this.puntos; // obtengo los puntos sin un get aunque es lo mismo que un get¿? hay otra manera?
     }
 
-    public void inscribirseA(Concurso c, LocalDate fecha){
-        //primero pregunto si NO esta activo antes de anotarme a algo sjadk
-        if (!c.estaActivo(fecha)){
-            throw new RuntimeException("El concurso no esta activo, pruebe en otro momento");
-        }
-        //si ignoro el if ESTA ACTIVO
-        this.concursos.add(c); //lo addeo
-        c.agregarParticipante(this); // -> hago la; logica de agregar el participante al concurso! por eso lo llamo como "esto"
-
-        if (c.esPrimerDia(fecha)){ // ACA en ves de hacer c.getInicio para obtener la fecha de inicio
-                                    //creo el metodo primer dia en concurso
-            this.sumarPuntos(PUNTOS); // si es asi SUMO puntos! tremendo
-        }
+    public void agregarConcurso(Concurso concurso){
+        this.concursos.add(concurso);
     }
-
 
     //get --------------------------------
     public int getPuntos() {

@@ -1,4 +1,4 @@
-package org.example;
+package Parte1.Concurso;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,6 +1,4 @@
-package org.example;
-import org.example.Participante;
-import org.example.Concurso;
+package Parte1.Concurso;
 
 //Junit 5
 import org.junit.jupiter.api.Test;
@@ -8,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import static junit.framework.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
+
+import Parte1.Concurso.Concurso;
+import Parte1.Concurso.Participante;
 
 public class CursoTest {
     @Test
