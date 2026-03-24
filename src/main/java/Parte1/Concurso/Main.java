@@ -18,9 +18,8 @@ public class Main {
 
 
         //ahora inscribo al usuario en el curso
-        p1.inscribirseA(c1,hoy);
-        p2.inscribirseA(c2,hoy);
-
+        c1.inscribirA(p1, hoy);
+        c2.inscribirA(p2, hoy);
 
     }
 }

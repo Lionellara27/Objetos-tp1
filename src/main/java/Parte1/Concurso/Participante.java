@@ -25,39 +25,13 @@ public class Participante {
     }
 
     //y se recuperan los mismos
-    public int sumarPuntosPrimerDia(){
+    public int puntosParticipante(){
         return this.puntos; // obtengo los puntos sin un get aunque es lo mismo que un get¿? hay otra manera?
     }
 
     public void agregarConcurso(Concurso concurso){
         this.concursos.add(concurso);
     }
-
-    //get --------------------------------
-    public int getPuntos() {
-        return puntos;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void getDni(int dni){
-        this.dni = dni;
-    }
-    //--------------------------------------------
-
-    //set
-    public void  setPuntos(int puntos) {
-        this.puntos = puntos;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public void setDni(int dni){
-        this.dni = dni;
-    }
-    /// //////////////////////////
 
     @Override
     public boolean equals(Object o) {
